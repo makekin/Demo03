@@ -12,9 +12,9 @@ namespace HeaterApplication
         {
             // create one instance of heater class
             Heater harvia = new Heater();
-            Heater.maxheat = 100;
             harvia.PrintData();
 
+            harvia.Model = "SuperHot";
             harvia.Heat = 20;
             harvia.Humidity = 50;
             harvia.PrintData();

@@ -43,7 +43,10 @@ namespace HeaterApplication
         //method to give more heat
         public void IncreaseHeat(int value)
         {
-            Heat += value;
+            if (Power == true)
+            {
+                Heat += value;
+            }
         }
 
         //method to lower temperature
