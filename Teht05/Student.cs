@@ -2,34 +2,34 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Threading.Tasks;
 
 namespace Teht05
 {
     class Student
     {
-        string Etunimi;
-        string Sukunimi;
-        string Luokka;
-        string age;
-        string opiskelijatunnus;
+        //properties
+        public string Name { get; set; }
+        public string Studentcode { get; set; }
+        public string Class { get; set; }
 
-        public void data()
+        public int Age { get; set; }
+       
+
+        //method to display Student properties
+        public void PrintData()
         {
-            Console.WriteLine("Enter First Name: ");
-            Etunimi = Console.ReadLine();
-
-            Console.WriteLine("Enter Family Name: ");
-            Sukunimi = Console.ReadLine();
-            Console.WriteLine("Enter Class: ");
-            Luokka = Console.ReadLine();
-            Console.WriteLine("Enter Age: ");
-            age = Console.ReadLine();
-            Console.WriteLine("Enter student number: ");
-            opiskelijatunnus = Console.ReadLine();
-
+            Console.WriteLine("Student data: ");
+            Console.WriteLine("- Name: " + Name);
+            Console.WriteLine("- Studentcode: " + Studentcode);
+            Console.WriteLine("- Class: " + Class);
+            Console.WriteLine("- Age: " + Age);
         }
 
-
-
+        //destructor
+        ~Student()
+        {
+            Console.WriteLine("Student object destroyed!");
+        }
     }
 }
